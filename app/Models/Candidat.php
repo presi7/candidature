@@ -28,7 +28,9 @@ class Candidat extends Model
 // supprimer un enregistrement en utilisant la méthode delete() sur votre modèle :
 $candidat = Candidat::find(1);
 // dd($candidat);
-$candidat->delete();
+if ( $candidat !=null) {
+    $candidat->delete();
+}
 
 //récupérer tous les enregistrements, y compris ceux marqués comme supprimés, vous pouvez utiliser la méthode withTrashed() :
 
