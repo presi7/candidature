@@ -2,7 +2,10 @@
 
 @section('content')
 
-<div class="container">
+<div class="container-fluid p-0">
+
+
+   <div class="container">
     <div class="row my-5">
         <div class="col-lg-12 margin-tb">
             <div class="float-start">
@@ -47,8 +50,9 @@
                 </div>
             </div> --}}
         <div class="col-xs-12 col-sm-12 col-md-12 ">
-                <button type="submit" class="btn btn-primary my-5">Soumettre</button>
+                <button type="submit" class="btn my-5" style="background-color:#85addb">Soumettre</button>
         </div>
+    </form>
    </div>
-</form>
+</div>
 @endsection

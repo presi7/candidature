@@ -2,15 +2,15 @@
 
 @section('content')
 
-<div class="container-fluid">
+<div class="container-fluid p-0">
     @if (session('success'))
     <div class="alert alert-info mt-5 text-center" style="width: 18rem; margin: auto">
         {{ session('success') }}
     </div>
     @endif
-    <img src="images/BANIERE.png" alt="Defarsci" class="img-fluid rounded" style="object-fit: cover;">
-    <div class="card my-3 mx-auto" style="max-width: 38rem;">
-        <div class="card-header text-black fs-5 fw-bold text-center" style="background-color: #85addb">FORMATION DE STAGE 100% PRATIQUE</div>
+    <img src="images/BANIERE1.png" alt="Defarsci" class="img-fluid rounded" style="object-fit: cover;">
+    <div class="card my-3 mx-auto" style="max-width: 40rem;">
+        <div class="card-header text-white fs-5 fw-bold text-center" style="background-color: #85addb">FORMATION DE STAGE 100% PRATIQUE</div>
         <div class="card-body">
             <form action="{{ route('store.candidat') }}" method="post" enctype="multipart/form-data">
                 @csrf
@@ -57,7 +57,9 @@
                 <div class="row mb-3">
                     <label for="myfile" class="col-sm-3 col-form-label">Télécharger votre CV:</label>
                     <div class="col-sm-9">
-                        <input type="file" id="myfile" name="myfile" accept="application/pdf" class="form-control">
+                        {{-- <input type="file" id="myfile" name="myfile" accept="application/pdf,docx,text" class="form-control"> --}}
+                        <input type="file" id="myfile" name="myfile" accept=".pdf,.doc,.docx" class="form-control">
+
                     </div>
                 </div>
                 <div class="row mb-3">

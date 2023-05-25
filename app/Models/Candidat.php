@@ -43,7 +43,10 @@ $candidat = Candidat::onlyTrashed()->get();
 // Eestaurer un enregistrement supprimé, vous pouvez utiliser la méthode restore() :
 
 $candidat = Candidat::onlyTrashed()->find(1);
-$candidat->restore();
+if ( $candidat !=null) {
+    $candidat->restore();
+}
+
 
 
 
